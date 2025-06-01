@@ -115,7 +115,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = '/static/'  # forçar o valor correto
+STATIC_URL = 'static/'  # forçar o valor correto
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -124,7 +124,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 
-STATIC_ROOT = "/home/viitaa1/todo-app-django/static"
+STATIC_ROOT = "/home/viitaa1/todo-app-django/static/"
 # or, eg,
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATIC_URL = '/static/'  # forçar o valor correto
