@@ -123,5 +123,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
+
+STATIC_URL = "/home/viitaa1/todo-app-django/static"
 # or, eg,
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
