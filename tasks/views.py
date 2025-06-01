@@ -26,9 +26,9 @@ def task_update(request, pk):
         form = TaskForm(request.POST, instance=task)
         if form.is_valid():
             task = form.save()
-            return redirect('task_detail',pk=task.pk)
+            return redirect('task_detail', pk=task.pk)
     else:
-        form = TaskForm()
+        form = TaskForm(instance=task)
     return render(request, 'tasks/task_form.html', {'form': form})
 
 def task_delete(request, pk):
@@ -37,7 +37,6 @@ def task_delete(request, pk):
         task.delete()
         return redirect('task_list')
     return render(request, 'tasks/task_confirm_delete.html', {'task': task})
-
 
 
 # Create your views here.
